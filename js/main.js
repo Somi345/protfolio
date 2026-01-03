@@ -167,3 +167,16 @@ document.querySelectorAll(".box").forEach(card => {
   });
 
 });
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+/* Close menu after clicking link */
+document.querySelectorAll(".nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
