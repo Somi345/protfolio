@@ -1,0 +1,885 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(180deg,#05070f,#070b1f);
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  right:0;
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,7,15,0.85);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:700;
+  color:#8b5cf6;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ gap: 120px;
+  min-height: 100vh;     /* hero full height */
+  max-height: 100vh;     /* 🔒 stops stretch */
+  overflow: hidden;     /* 🔒 prevents zoom issues */
+
+  padding: 80px 60px;
+}
+
+
+
+.hero-content{
+  max-width:600px;
+}
+
+.hero-content h1{
+  font-size:48px;
+  line-height:1.2;
+}
+
+.hero-content span{
+  color:#8b5cf6;
+}
+
+.hero-content h2{
+  margin:15px 0;
+  color:#22d3ee;
+  font-weight:600;
+}
+
+.hero-content p{
+  color:#b6b8ff;
+  line-height:1.6;
+}
+
+.socials{
+  margin-top:20px;
+}
+
+.socials a{
+  margin-right:15px;
+  font-size:22px;
+  color:#8b5cf6;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  color:#22d3ee;
+}
+
+/* PROFILE PHOTO */
+.profile-ring{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  padding:6px;
+  background:conic-gradient(#8b5cf6,#22d3ee,#8b5cf6);
+}
+
+.profile-ring img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* SECTIONS */
+.section{
+  padding:100px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:60px;
+  color:#ffffff;
+}
+
+/* VERTICAL CONTAINER */
+.vertical-container{
+  max-width:900px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  position:relative;
+}
+
+.vertical-container::before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:linear-gradient(#8b5cf6,#22d3ee);
+}
+
+/* BOX */
+.box{
+  position:relative;
+  background:#0f1326;
+  padding:30px 30px 30px 60px;
+  border-radius:22px;
+  transition:0.4s ease;
+}
+
+.box:hover{
+  transform:translateX(12px);
+  box-shadow:0 0 30px rgba(139,92,246,0.6);
+}
+
+/* DOT */
+.dot{
+  position:absolute;
+  left:10px;
+  top:30px;
+  width:16px;
+  height:16px;
+  background:#8b5cf6;
+  border-radius:50%;
+}
+
+/* ICON */
+.box-icon{
+  position:absolute;
+  right:20px;
+  top:20px;
+  font-size:20px;
+  color:#22d3ee;
+}
+
+/* SKILL BAR */
+.bar{
+  margin-top:10px;
+  width:100%;
+  height:8px;
+  background:#1a1a2e;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.bar div{
+  height:100%;
+  background:linear-gradient(90deg,#8b5cf6,#22d3ee);
+}
+
+/* FORM */
+input,textarea,button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:12px;
+  border:none;
+  outline:none;
+}
+
+input,textarea{
+  background:#080b1e;
+  color:#fff;
+}
+
+button{
+  margin-top:15px;
+  background:linear-gradient(135deg,#8b5cf6,#22d3ee);
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#b6b8ff;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .vertical-container::before{
+    left:8px;
+  }
+}
+/* =========================
+   HORIZONTAL TOP NAVBAR
+========================= */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,7,15,0.9);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+
+.nav-menu{
+  display:flex;
+  gap:26px;
+}
+
+.nav-menu a{
+  position:relative;
+  text-decoration:none;
+  color:#b6b8ff;
+  font-size:15px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,#8b5cf6,#22d3ee);
+  transition:0.3s;
+}
+
+.nav-menu a:hover{
+  color:#ffffff;
+}
+
+.nav-menu a:hover::after{
+  width:100%;
+}
+
+/* =========================
+   WOW PRO MODE ENHANCEMENTS
+========================= */
+
+/* Glass effect for cards */
+.box{
+  backdrop-filter: blur(14px);
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Elegant hover glow */
+.box::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(139,92,246,0.35),
+    transparent 60%
+  );
+  opacity:0;
+  transition:0.4s;
+  pointer-events:none;
+}
+
+.box:hover::after{
+  opacity:1;
+}
+
+/* Smooth section entrance */
+.section{
+  opacity:0;
+  transform: translateY(60px) scale(0.96);
+  animation: sectionIn 1s ease forwards;
+}
+
+.section:nth-child(even){
+  animation-delay:0.2s;
+}
+
+@keyframes sectionIn{
+  to{
+    opacity:1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hero intro animation */
+.hero{
+  animation: heroFade 1.2s ease forwards;
+}
+
+@keyframes heroFade{
+  from{
+    opacity:0;
+    transform: translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* Background subtle glow */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(139,92,246,0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(34,211,238,0.12), transparent 40%);
+  z-index:-1;
+}
+
+/* Social icon premium hover */
+.socials a{
+  transition:0.3s ease;
+}
+
+.socials a:hover{
+  transform: translateY(-4px) scale(1.1);
+  text-shadow:0 0 12px #22d3ee;
+}
+
+/* Navbar luxury feel */
+.navbar{
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* Skill bar animation */
+.bar div{
+  animation: fillBar 1.5s ease forwards;
+}
+
+@keyframes fillBar{
+  from{width:0}
+}
+
+/* Footer polish */
+footer{
+  letter-spacing:1px;
+}
+
+
+
+/* =========================
+   PAGE LOADER (WOW EFFECT)
+========================= */
+
+#page-loader{
+  position:fixed;
+  inset:0;
+  background:#05070f;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  transition:opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#page-loader.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+/* Loader content */
+.loader-content{
+  text-align:center;
+}
+
+/* Spinning ring */
+
+.loader-ring{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:4px solid rgba(255,255,255,0.1);
+  border-top:4px solid #8b5cf6;
+  animation:spin 1.2s linear infinite;
+  margin:0 auto 25px;
+}
+/* =========================
+   SAFE PROFESSIONAL INTRO
+========================= */
+
+.intro-overlay{
+  position:fixed;
+  inset:0;
+  background:#05070f;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation:introFade 1.8s ease forwards;
+  pointer-events:none; /* CRITICAL */
+}
+
+/* Fade away automatically */
+@keyframes introFade{
+  0%{opacity:1}
+  70%{opacity:1}
+  100%{
+    opacity:0;
+    visibility:hidden;
+  }
+}
+
+.intro-content{
+  text-align:center;
+  transform:translateY(10px);
+  animation:introMove 1.8s ease forwards;
+}
+
+@keyframes introMove{
+  to{transform:translateY(0)}
+}
+
+/* Premium ring */
+.intro-ring{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:conic-gradient(#8b5cf6,#22d3ee,#8b5cf6);
+  -webkit-mask:radial-gradient(circle, transparent 65%, #000 66%);
+  animation:spin 1.2s linear infinite;
+  margin:0 auto 20px;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+.intro-content h1{
+  color:#8b5cf6;
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+.intro-content p{
+  margin-top:6px;
+  color:#b6b8ff;
+  font-size:14px;
+}
+
+
+
+
+
+
+/* =========================
+   SCROLL TIMELINE EFFECT
+========================= */
+
+.vertical-container{
+  position:relative;
+  padding-left:40px;
+}
+
+.vertical-container::before{
+  content:"";
+  position:absolute;
+  left:15px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(
+    to bottom,
+    transparent,
+    #8b5cf6,
+    #22d3ee,
+    transparent
+  );
+}
+
+.box{
+  position:relative;
+}
+
+.box .dot{
+  position:absolute;
+  left:-32px;
+  top:22px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#8b5cf6;
+  box-shadow:0 0 12px #8b5cf6;
+}
+
+/* =========================
+   CURSOR GLOW EFFECT
+========================= */
+.cursor-glow{
+  position:fixed;
+  top:0;
+  left:0;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(139,92,246,0.35),
+    rgba(34,211,238,0.25),
+    transparent 60%
+  );
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  z-index:9999;
+  mix-blend-mode:screen;
+}
+
+
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+#scroll-progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0%;
+  background:linear-gradient(90deg,#8b5cf6,#22d3ee);
+  z-index:9998;
+  transition:width 0.1s linear;
+}
+
+
+
+/* =========================
+   3D TILT CARD EFFECT
+========================= */
+
+.box{
+  transform-style:preserve-3d;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  will-change:transform;
+}
+
+.box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(
+    circle at var(--x,50%) var(--y,50%),
+    rgba(139,92,246,0.35),
+    transparent 60%
+  );
+  opacity:0;
+  transition:opacity 0.3s;
+  pointer-events:none;
+}
+
+.box:hover::before{
+  opacity:1;
+}
+
+
+
+
+/* === PROFESSIONAL PROFILE PHOTO === */
+
+.profile-wrapper{
+  position:relative;
+  width:260px;
+  height:260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* HERO LAYOUT */
+.hero{
+  padding:80px 8%;
+}
+
+.hero-inner{
+  display:flex;
+  align-items:center;
+  gap:80px;
+}
+
+/* PROFILE PHOTO CARD (LEFT) */
+.profile-card{
+  width:300px;
+  height:360px;
+  border-radius:22px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.4);
+}
+
+.profile-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TEXT (RIGHT) */
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero-content h1 span{
+  color:#8b5cf6;
+}
+
+.hero-content h2{
+  font-size:22px;
+  color:#22d3ee;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  max-width:520px;
+  line-height:1.7;
+  color:#cbd5f5;
+  margin-bottom:24px;
+}
+
+/* SOCIAL ICONS */
+.socials a{
+  margin-right:16px;
+  font-size:20px;
+  color:#8b5cf6;
+  transition:0.2s;
+}
+
+.socials a:hover{
+  color:#22d3ee;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media(max-width:1200px){
+  .hero-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  
+}
+/* =====================================================
+   FINAL PROFILE FIX — USES YOUR EXACT HTML
+   Overrides all previous profile styles safely
+===================================================== */
+
+/* isolate wrapper from all layouts */
+.neo-profile-wrapper {
+  position: relative;
+  width: 260px;
+  height: 340px;
+
+  flex: none !important;
+  align-self: center !important;
+}
+
+/* profile container */
+.neo-profile {
+  width: 260px;
+  height: 340px;
+  position: relative;
+}
+
+/* soft professional glow (visual only) */
+.neo-profile::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: radial-gradient(
+    circle,
+    rgba(139,92,246,0.28),
+    transparent 70%
+  );
+  filter: blur(24px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* image — HARD LOCKED */
+.neo-profile img {
+  width: 260px !important;
+  height: 340px !important;
+
+  object-fit: cover !important;
+  object-position: center 18% !important;
+
+  border-radius: 0 0 140px 140px !important;
+
+  filter: contrast(1.05) brightness(1.03);
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.6),
+    0 12px 30px rgba(0,0,0,0.35);
+
+  display: block;
+}
+
+
+@media(max-width:900px){
+  .hero{
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}
+/* Horizontal scroll layout */
+
+.horizontal-scroll{
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+.horizontal-track{
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+/* Keep same box look, just size control */
+.horizontal-track .box{
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+/* Scrollbar (neutral, no color change) */
+.horizontal-scroll::-webkit-scrollbar{
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.25);
+  border-radius: 10px;
+}
+
+
+
+/* Increase vertical size of project cards (structure only) */
+.horizontal-track .box{
+  min-width: 320px;
+  max-width: 32px;
+  min-height: 340px;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.horizontal-track .box p{
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.cert-view-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:6px 16px;
+  border-radius:8px;
+  background:#3b82f6; /* blue */
+  color:white;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+}
+.profile-img-zoom{
+  width:260px;
+  height:340px;        /* controls how much body is visible */
+  overflow:hidden;    /* hides lower body */
+  border-radius:40px;
+}
+
+.profile-img-zoom img{
+  width:100%;
+  height:100%;
+  object-fit:cover;   /* crops image properly */
+  object-position: top; /* shows upper body only */
+  transition:transform 0.5s ease;
+}
+
+.profile-img-zoom:hover img{
+  transform:scale(1.12);
+}
+
+/* Lively animated professional border */
+.neo-profile-wrapper{
+  position:relative;
+  width:280px;
+  height:380px;
+  border-radius:50%;
+  padding:4px;
+  overflow:hidden;
+}
+
+/* moving glowing border */
+.neo-profile-wrapper::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:conic-gradient(
+    #7c5cff,
+    #00eaff,
+    #7c5cff,
+    #00eaff
+  );
+  animation:spinBorder 6s linear infinite;
+  z-index:0;
+}
+
+/* inner image container */
+.neo-profile{
+  position:relative;
+  width:100%;
+  height:100%;
+  background:#0b0b16;
+  border-radius:50%;
+  overflow:hidden;
+  z-index:1;
+}
+
+/* image */
+.neo-profile img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top;
+  transition:transform 0.6s ease;
+}
+
+/* subtle zoom */
+.neo-profile-wrapper:hover img{
+  transform:scale(1.08);
+}
+
+/* animation */
+@keyframes spinBorder{
+  100%{
+    transform:rotate(360deg);
+  }
+}
